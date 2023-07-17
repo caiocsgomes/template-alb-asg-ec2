@@ -6,11 +6,7 @@ resource "aws_lb_listener" "listener" {
   certificate_arn   = var.listener["certificate_arn"]
 
   default_action {
-    type = "fixed-response"
-    fixed_response {
-      content_type = "text/plain"
-      message_body = "route not implemented"
-      status_code  = "501"
-    }
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.tg.arn
   }
 }

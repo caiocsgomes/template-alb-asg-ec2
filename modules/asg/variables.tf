@@ -28,3 +28,25 @@ variable "subnet_ids" {
 variable "alb_target_group_arn" {
   type = string
 }
+
+variable "alb_port" {
+  default = 80
+}
+
+variable "vpc_id" {
+  type = string
+}
+
+variable "user_data" {
+  default = ""
+}
+
+variable "alb_sg" {
+  type    = string
+  default = ""
+}
+
+variable "associate_public_ip_address" {
+  type    = bool
+  default = false
+}

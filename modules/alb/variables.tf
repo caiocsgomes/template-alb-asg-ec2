@@ -22,3 +22,8 @@ variable "protocol" {
   type    = string
   default = "HTTP"
 }
+
+variable "health_check_path" {
+  type    = string
+  default = "/"
+}

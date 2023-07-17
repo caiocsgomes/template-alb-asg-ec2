@@ -26,7 +26,6 @@ data "aws_vpc" "vpc" {
 
 
 resource "aws_security_group_rule" "sg_rule" {
-  count                    = var.alb_sg == "" ? 0 : 1
   type                     = "ingress"
   from_port                = 0
   to_port                  = 0

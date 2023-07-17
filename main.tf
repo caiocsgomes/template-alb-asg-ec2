@@ -17,10 +17,9 @@ module "vpc" {
 module "asg" {
   source               = "./modules/asg"
   project_name         = var.project_name
-  subnet_ids           = module.vpc.public_subnet_ids
+  subnet_ids           = module.vpc.private_subnet_ids
   alb_target_group_arn = module.alb.target_group_arn
   vpc_id               = module.vpc.vpc_id
   user_data            = var.user_data
   alb_sg               = module.alb.alb_sg
-  associate_public_ip_address = var.associate_public_ip_address
 }

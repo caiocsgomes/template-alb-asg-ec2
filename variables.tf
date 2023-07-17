@@ -27,8 +27,3 @@ variable "availability_zones" {
 variable "user_data" {
   default = ""
 }
-
-variable "associate_public_ip_address" {
-  type    = bool
-  default = false
-}

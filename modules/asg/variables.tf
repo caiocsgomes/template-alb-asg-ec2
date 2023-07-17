@@ -13,8 +13,8 @@ variable "min_size" {
   default = 1
 }
 
-variable "desired_capacity" {
-  default = 2
+variable "target_cpu_value" {
+  default = 50.0
 }
 
 variable "max_size" {
@@ -42,11 +42,5 @@ variable "user_data" {
 }
 
 variable "alb_sg" {
-  type    = string
-  default = ""
-}
-
-variable "associate_public_ip_address" {
-  type    = bool
-  default = false
+  type = string
 }

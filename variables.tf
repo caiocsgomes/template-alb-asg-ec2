@@ -27,3 +27,20 @@ variable "availability_zones" {
 variable "user_data" {
   default = ""
 }
+
+variable "instance_type" {
+  default = "t3.micro"
+}
+
+variable "min_size" {
+  default = 1
+}
+
+variable "target_cpu_value" {
+  default = 50.0
+}
+
+variable "max_size" {
+  default = 3
+}
+

@@ -22,4 +22,8 @@ module "asg" {
   vpc_id               = module.vpc.vpc_id
   user_data            = var.user_data
   alb_sg               = module.alb.alb_sg
+  instance_type        = var.instance_type
+  min_size             = var.min_size
+  target_cpu_value     = var.target_cpu_value
+  max_size             = var.max_size
 }
